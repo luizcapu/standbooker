@@ -1,0 +1,47 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	$("#frmChangePass").validate({
+		rules: {
+			iptActual:{
+				required: true
+			},
+			iptNewPass:{
+				required: true,
+				minlength:5				
+			},
+			iptConfirmPass:{
+				required: true,
+				minlength:5,				
+				equalTo: "#iptNewPass"
+			}
+		},
+		messages: {
+			iptActual:{
+				required: obrigatorio("current pass")
+			},
+			iptNewPass:{
+				required: obrigatorio("new pass"),
+				minlength:minimo("new pass", 5)
+			},
+			iptConfirmPass:{
+				required: obrigatorio("pass confirmation"),
+				minlength:minimo("pass confirmation", 5),
+				equalTo: "Confirmation do not match"
+			}
+		}
+	});
+
+	$('#frmChangePass').submit(function() {
+
+		
+		if (!$('#frmChangePass').valid()) return false;
+
+		$("#divSalvando").show();
+		$("#frmChangePass").hide();
+
+		return true;		
+	});
+
+});
+</script>

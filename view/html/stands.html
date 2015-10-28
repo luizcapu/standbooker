@@ -1,0 +1,53 @@
+<p style="float: right; text-align: right; font-size: 11px;">
+{START_DATE} to {END_DATE}
+<br/>
+{ADDRESS}
+<br/>
+{LOCATION_NAME} - {COUNTRY_NAME} 
+</p>
+
+<div style="width: 100%; overflow:scroll; margin-top: 15px;">
+	<!-- BEGIN BLOCK_CORRIDOR -->
+	<div style="width: 100%; height: 100px; overflow:visible;">
+		<!-- BEGIN BLOCK_STAND -->
+		<div style="border: 1px solid; height: 98px; width: 98px; float: left; {STAND_CSS}">
+			<!-- BEGIN BLOCK_AVAILABLE -->
+			<p style="text-align: center; font-size: 11px; padding-top: 25px; cursor: pointer;" onclick="javascript: standDetails({STAND_ID});">
+				<span style="font-weight: bold;">U$ {PRICE}</span>
+				<br/><br/>
+				Click to book !
+			</p>
+			<!-- END BLOCK_AVAILABLE -->
+			
+			<!-- BEGIN BLOCK_MKT_LINK -->
+			<div style="position: relative; top:80px; background-color: #000; text-align: center; width: 88px; padding: 5px;">
+				<a target="_blank" href="{MKT_LINK}" style="font-size: 11px; color: #fff;">Download Mkt</a>
+			</div>
+			<!-- END BLOCK_MKT_LINK -->
+		</div>
+		<!-- END BLOCK_STAND -->
+	</div>
+	
+	<!-- BEGIN BLOCK_CORRIDOR_NUMBER -->
+	<div style="width: 80%; overflow:visible; padding: 15px; font-weight: bold; font-size: 11px;">
+	CORRIDOR {CORRIDOR_NUMBER}
+	</div>
+	<!-- END BLOCK_CORRIDOR_NUMBER -->
+	
+	<!-- END BLOCK_CORRIDOR -->
+</div>
+
+<form style="display: none;" method="get" action="../view/standBook.php" name="frmBook" id="frmBook">
+	<input name="sid" id="sid" value="" />
+</form>
+
+<div style="display:none; background-color: #fff; width: 80%; height: 300px; padding: 50px;" id="divStandDetails" title="Stand Details">
+<h4>Stand Details</h4>
+<img style="float: left; width: 300px; clear: none; margin-right: 40px;" src="../img/stand-sample.jpg" />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut malesuada lorem. Vestibulum lectus elit, maximus non malesuada et, cursus ac diam. Integer dapibus, tellus vitae ultricies vulputate, erat velit pretium nunc, laoreet gravida dolor orci vel mauris. Praesent vitae feugiat erat. Integer dictum metus id ligula suscipit commodo. Nunc vehicula pulvinar lacinia. Integer gravida justo quam, vel accumsan ante efficitur a. Nullam tempor libero eget luctus lobortis. Phasellus pellentesque mattis egestas. Aliquam sit amet sapien ut est vehicula hendrerit. Mauris id mi ornare, consectetur dolor nec, fringilla nisi.
+<br/>
+Nullam neque lectus, ornare ut neque ut, sollicitudin lobortis lacus. Maecenas vitae dapibus tortor. Aliquam a nunc ligula. Ut sem justo, tincidunt id commodo a, condimentum a ante. In molestie dolor arcu. In finibus ante sed nibh aliquet, convallis suscipit arcu feugiat. In hac habitasse platea dictumst.
+<br/><br/><br/>
+<a onclick='javascript: $("#frmBook").submit();' class="b-confirm" style="margin: 0px; float: left;">Reserve this stand !</a>
+
+</div>

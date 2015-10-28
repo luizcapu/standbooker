@@ -1,0 +1,61 @@
+<div style="width: 930px; margin: 0 auto;">
+	<div style="width: 320px; float: left; clear: none; margin-right: 80px;">		
+		<h3>Have an Account ? Log In</h3>		
+		<form name="frmLogin" id="frmLogin" action="../process/companyLogin.php" method="post" style="margin-top: 5px;">
+			<input type="hidden" name="reqURL" id="reqURL" value="{LOGIN_REQ_URL}" />
+			<fieldset>
+				<dt>E-mail</dt>
+				<dd>
+					<input type="text" name="iptEmailLogin" id="iptEmailLogin" value="" />
+				</dd>
+				<dt>Password</dt>
+				<dd>
+					<input type="password" name="iptPassLogin" id="iptPassLogin" value="" />
+				</dd>
+				<dd>
+					<button type="submit" class="b-confirm" style="margin: 0px;">Login</button>
+				</dd>
+			</fieldset>
+		</form>
+	</div>
+	
+	<div style="position: relative; width: 400px; padding-left: 80px; float: left; clear: none; border-left: 1px solid #000;">		
+		<h3>New Company ? Register now</h3>		
+		<form name="frmNew" id="frmNew" action="../process/newCompany.php" method="post" style="margin-top: 5px;" enctype="multipart/form-data">
+			<input type="hidden" name="reqURL" id="reqURL" value="{LOGIN_REQ_URL}" />
+			<fieldset>
+				<dt>Company Name</dt>
+				<dd>
+					<input type="text" name="iptName" id="iptName" value="" />
+				</dd>
+				<dt>E-mail</dt>
+				<dd>
+					<input type="text" name="iptEmail" id="iptEmail" value="" />
+				</dd>
+				<dt>Admin Name</dt>
+				<dd>
+					<input type="text" name="iptAdmin" id="iptAdmin" value="" />
+				</dd>
+				<dt>Company Phone Number</dt>
+				<dd>
+					<input type="text" name="iptPhone" id="iptPhone" value="" />
+				</dd>
+				<dt>Company Logo (only JPG)</dt>
+				<dd>
+					<input type="file" name="iptLogo" id="iptLogo" value="" />
+				</dd>
+				<dt>Password</dt>
+				<dd>
+					<input type="password" name="iptPass" id="iptPass" value="" />
+				</dd>
+				<dt>Confirm Password</dt>
+				<dd>
+					<input type="password" name="iptConfirm" id="iptConfirm" value="" />
+				</dd>
+				<dd>
+					<button type="submit" class="b-confirm" style="margin: 0px;">Register</button>
+				</dd>
+			</fieldset>
+		</form>
+	</div>
+</div>

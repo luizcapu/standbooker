@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../js/jqvmap/jqvmap.css" type="text/css" />
+<script type="text/javascript" src="../js/jqvmap/jquery.vmap.min.js"></script>
+<script type="text/javascript" src="../js/jqvmap/maps/jquery.vmap.{MAP_REF}.js"></script>
+ 
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	var originalSelectedRegions = [{REGIONS_WITH_EVENTS}];
+	loadMap(originalSelectedRegions);
+});
+
+function loadMap(originalSelectedRegions){
+	$('#countrymap').remove();
+	var objDivDesc = $("#region-desc");
+	$('#map-container').append('<div id="countrymap" style="width: 80%; height: 600px; margin: 0 auto;"></div>');
+	$('#countrymap').vectorMap({
+		map: '{MAP_REF}_en',
+		backgroundColor: '#e5e5e5',
+		color: '#484a4c',
+		selectedColor: '#5cb85c',
+		enableZoom: false,
+		showTooltip: false,
+		selectedRegions: originalSelectedRegions,
+		onRegionClick: function(element, code, region)
+	    {
+			$(objDivDesc).html("");
+			$("#map-container").hide(); 
+			$("#divEvents").fadeIn();
+	        loadMap(originalSelectedRegions);
+	        loadEvents(code, region);
+	    },
+	    onRegionOver: function(element, code, region)
+	    {
+			$(objDivDesc).html(region);
+	    },
+	    onRegionOut: function(element, code, region)
+	    {
+			$(objDivDesc).html("&nbsp;");
+	    }
+	    
+	});	
+}
+
+function loadEvents(mapRef, region){
+	$.ajax( {
+		type :"POST",
+		url :"../process/loadEventsByLocationMapRef.php",
+		data :"mapRef=" + mapRef,
+		beforeSend : function() {
+			$("#divEvents").html("Loading events for "+region+"...");
+		},
+		success : function(txt) {
+			$("#divEvents").html(txt);
+		},
+		error : function(txt) {
+			$("#divEvents").html("Got errors loading events. Please, try again later.");
+		}
+	});	
+}
+
+</script>

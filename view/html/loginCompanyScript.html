@@ -1,0 +1,98 @@
+<script type="text/javascript" src="../js/jquery.validate.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+	$("#frmLogin").validate({
+		rules: {
+			iptEmailLogin:{
+				required: true
+			},
+			iptPassLogin:{
+				required: true
+			}
+		},
+		messages: {
+			iptEmailLogin:{
+				required: obrigatorio("login")
+			},
+			iptPassLogin:{
+				required: obrigatorio("senha")
+			}
+		}
+	});
+	
+	$('#frmLogin').submit(function() {
+		
+		if (!$('#frmLogin').valid()) return false;
+
+		$("#frmLogin").hide();
+		$(".b-confirm").attr("disabled", "disabled");
+
+		return true;		
+	});
+
+	$("#frmNew").validate({
+		rules: {
+			iptName:{
+				required: true
+			},
+			iptEmail:{
+				required: true,
+				email: true
+			},
+			iptAdmin:{
+				required: true
+			},
+			iptPhone:{
+				required: true
+			},
+			iptLogo:{
+				required: true
+			},			
+			iptPass:{
+				required: true
+			},
+			iptConfirm:{
+				required: true,
+				equalTo: "#iptPass"
+			}
+		},
+		messages: {
+			iptName:{
+				required: obrigatorio("name")
+			},
+			iptEmail:{
+				required: obrigatorio("email")
+			},
+			iptAdmin:{
+				required: obrigatorio("admin name")
+			},
+			iptPhone:{
+				required: obrigatorio("phone")
+			},
+			iptLogo:{
+				required: obrigatorio("phone")
+			},			
+			iptPass:{
+				required: obrigatorio("pass")
+			},
+			iptConfirm:{
+				required: obrigatorio("confirm")
+			}
+		}
+	});
+	
+	$('#frmNew').submit(function() {
+		
+		if (!$('#frmNew').valid()) return false;
+
+		$("#frmNew").hide();
+		$(".b-confirm").attr("disabled", "disabled");
+
+		return true;		
+	});
+	
+	$("#iptEmailLogin").focus();
+});
+</script>

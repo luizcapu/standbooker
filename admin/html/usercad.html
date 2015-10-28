@@ -1,0 +1,40 @@
+<a class="b-cancel" href="../admin/userlist.php">Cancel</a>
+
+<div id="reqcad" style="position:relative; width: 50%; float: none; clear: both; overflow: auto; text-align: center; margin: 0 auto; margin-top: 20px;">
+
+	<div name="divSalvando" id="divSalvando" style="display:none; background-color: #fff; padding:15px; margin: 0 auto; text-align: center; color: #000; font-size: 14px; font-weight: bold; overflow: auto;">
+		<img src="../img/loading.gif" alt="Salvando" title="Salvando" />
+		<p style="clear: both; text-align: center;">Wait... Processing your request</p>
+	</div>
+
+	<form name="frmUserInfo" id="frmUserInfo" action="../adminProcess/usercadProcess.php" method="post">
+		<input type="hidden" name="id" id="id" value="{ID_ADMIN}" />
+		<fieldset>
+			<dt style="width: 200px;">Login</dt>
+			<dd style="width: 200px;">
+				<input type="text" name="iptLogin" id="iptLogin" value="{UI_LOGIN}" />
+			</dd>
+			<dt>E-mail</dt>
+			<dd>
+				<input type="text" name="iptEmail" id="iptEmail" value="{UI_EMAIL}" />
+			</dd>
+			<dt>Name</dt>
+			<dd>
+				<input type="text" name="iptNome" id="iptNome" value="{UI_NOME}" />
+			</dd>
+			<!-- BEGIN BLOCK_NEW_USER_PASS -->
+			<dt style="float: left; clear: none; width: 200px;">Password</dt>
+			<dt style="float: left; clear: none; width: 200px; margin-left: 20px;">Password Confirmation</dt>
+			<dd style="float: left; clear: both; width: 200px;">
+				<input type="password" name="iptNewPass" id="iptNewPass" value="" />
+			</dd>
+			<dd style="float: left; clear: none; width: 200px; margin-left: 20px;">
+				<input type="password" name="iptConfirmPass" id="iptConfirmPass" value="" />
+			</dd>
+			<!-- END BLOCK_NEW_USER_PASS -->
+			<dd>
+				<button type="submit" class="b-confirm"><img src="../img/s_icons/w/check.png" />Confirm {ACAO_CAD} account</button>
+			</dd>
+		</fieldset>
+	</form>
+</div>

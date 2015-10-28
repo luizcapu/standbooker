@@ -1,0 +1,30 @@
+.encmenu-defaults{
+	background-color: #fff;
+	width:auto;
+	height:auto;
+	overflow: auto;
+	position: absolute;
+}
+
+.encmenu-defaults li{
+	background-color: transparent;
+	overflow: auto;
+}
+
+.encmenu-defaults li a{
+	color: #000;
+	margin: 0px; 
+	display: block; 
+	height: 100%;
+	font-weight: normal;
+	font-size: 13px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right:20px;
+}
+
+.encmenu-defaults li img{
+	float: left;
+	width: 20px;
+	margin-right: 10px;
+}

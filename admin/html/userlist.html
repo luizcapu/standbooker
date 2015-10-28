@@ -1,0 +1,45 @@
+<a href="usercad.php" class="b-confirm">New Account</a>
+<div class="v-separator-30">
+</div>
+
+<!-- BEGIN BLOCK_COM_REGISTRO -->
+<table enc-title="admin_accounts">
+	<thead>
+		<tr>
+			<th class="sort-asc">Login</th>
+			<th>Name</th>
+			<th>E-mail</th>
+			<th class="col-no-sort">Edit</th>
+			<th class="col-no-sort">Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- BEGIN BLOCK_IT_CADASTRO -->		
+		<tr>
+			<td>{LOGIN_ADMIN}</td>
+			<td>{NAME_ADMIN}</td>
+			<td>{EMAIL_ADMIN}</td>
+			<td class="tbl-row-action">
+				<a href="../admin/usercad.php?id={ID_ADMIN}" title="Edit Account">
+					<img src="../img/s_icons/b/edit.png" />
+				</a>
+			</td>
+			<td class="tbl-row-action">
+				<a onclick="javascript: if (confirm('Delete record ?')) $('#frmDelFrm{COUNT_REG}').submit();" title="Delete Account">
+					<img src="../img/s_icons/b/delete.png" />
+				</a>
+				<form name="frmDelFrm{COUNT_REG}" id="frmDelFrm{COUNT_REG}" action="../adminProcess/userdelProcess.php" method="post">
+					<input type="hidden" name="id" id="id" value="{ID_ADMIN}" />
+				</form>
+			</td>
+		</tr>
+		<!-- END BLOCK_IT_CADASTRO -->		
+	</tbody>
+</table>
+<!-- END BLOCK_COM_REGISTRO -->
+
+<!-- BEGIN BLOCK_SEM_REGISTRO -->
+<p style="clear: both; float: none; padding-top: 30px; padding-bottom: 30px; text-align: center;">	
+No records available
+</p>	
+<!-- END BLOCK_SEM_REGISTRO -->

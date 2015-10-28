@@ -1,0 +1,85 @@
+<a class="b-cancel" href="../admin/eventlist.php">Cancel</a>
+
+<!-- BEGIN BLOCK_UNIMPLEMENTED -->
+<p style="clear: both; float: none; padding-top: 30px; padding-bottom: 30px; text-align: center;">	
+TODO: Event edit is not implemented
+</p>	
+<!-- END BLOCK_UNIMPLEMENTED -->
+
+<!-- BEGIN BLOCK_FORM_EVENT -->
+<div id="reqcad" style="position:relative; width: 50%; float: none; clear: both; overflow: auto; text-align: center; margin: 0 auto; margin-top: 20px;">
+
+	<div name="divSalvando" id="divSalvando" style="display:none; background-color: #fff; padding:15px; margin: 0 auto; text-align: center; color: #000; font-size: 14px; font-weight: bold; overflow: auto;">
+		<img src="../img/loading.gif" alt="Salvando" title="Salvando" />
+		<p style="clear: both; text-align: center;">Wait... Processing your request</p>
+	</div>
+
+	<form name="frmEventInfo" id="frmEventInfo" action="../adminProcess/eventcadProcess.php" method="post">
+		<input type="hidden" name="id" id="id" value="{ID_EVENT}" />
+		<fieldset>
+
+			<dt>Event Name</dt>
+			<dd>
+				<input type="text" name="iptName" id="iptName" value="{UI_NAME}" />
+			</dd>
+
+			<dt style="width: 200px;">Country</dt>
+			<dt style="width: 200px; float: left; clear: none; margin-left: 15px;">Location</dt>
+
+			<dd style="width: 200px;">
+				<select name="selCountry" id="selCountry" onchange="javascript: loadLocations(this, document.frmEventInfo.selLocation);">
+					<option value="">Select a country...</option>
+					<!-- BEGIN BLOCK_COUNTRY_OPT -->
+					<option value="{UI_COUNTRY_ID}">{UI_COUNTRY_NAME}</option>
+					<!-- END BLOCK_COUNTRY_OPT -->
+				</select>
+			</dd>
+
+			<dd style="width: 200px; float: left; clear: none; margin-left: 15px;">
+				<select name="selLocation" id="selLocation">
+					<option value="">Select a country...</option>
+				</select>
+			</dd>
+
+			<dt>Address</dt>
+			<dd>
+				<input type="text" name="iptAddress" id="iptAddress" value="{UI_ADDRESS}" />
+			</dd>
+
+			<dt style="width: 200px;">From (yyyy-mm-dd)</dt>
+			<dt style="width: 200px; float: left; clear: none; margin-left: 15px;">To (yyyy-mm-dd)</dt>
+
+			<dd style="width: 200px;">
+				<input type="text" name="iptFrom" id="iptFrom" value="{UI_FROM}" />
+			</dd>
+
+			<dd style="width: 200px; float: left; clear: none; margin-left: 15px;">
+				<input type="text" name="iptTo" id="iptTo" value="{UI_TO}" />
+			</dd>
+
+			<dt>Event Details</dt>
+			<dd>
+				<textarea name="txtDetails" id="txtDetails"></textarea>
+			</dd>
+
+			<dt style="width: 200px;">Stands per Corridor</dt>
+			<dt style="width: 200px; float: left; clear: none; margin-left: 15px;">No. of Corridors</dt>
+			<dt style="width: 200px; float: left; clear: none; margin-left: 15px;">Default Stand Price</dt>
+
+			<dd style="width: 200px;">
+				<input type="text" name="iptStandPerCorridor" id="iptStandPerCorridor" value="{UI_ST_CORRIDOR}" />
+			</dd>
+			<dd style="width: 200px; float: left; clear: none; margin-left: 15px;">
+				<input type="text" name="iptNoCorridors" id="iptNoCorridors" value="{UI_NO_CORRIDORS}" />
+			</dd>
+			<dd style="width: 200px; float: left; clear: none; margin-left: 15px;">
+				<input type="text" name="iptStandPrice" id="iptStandPrice" value="{UI_STAND_PRICE}" />
+			</dd>
+
+			<dd>
+				<button type="submit" class="b-confirm"><img src="../img/s_icons/w/check.png" />Confirm {ACAO_CAD} event</button>
+			</dd>
+		</fieldset>
+	</form>
+</div>
+<!-- END BLOCK_FORM_EVENT -->

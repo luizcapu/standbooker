@@ -1,0 +1,960 @@
+/*
+#007b3b (verde mais escuro)
+#8dc63f (verde mais claro)
+#808285 (cinza) 
+#ab0f14 (vermelho escuro)
+*/
+
+/* INICIO ELEMENTOS HTML */
+
+
+html
+{
+	font: normal 12px Arial, Verdana, "Lucida Grande", Georgia, Sans-Serif;
+	/*
+	font: normal 12px "Helvetica Neue LT Std", Arial, Verdana, "Lucida Grande", Georgia, Sans-Serif;
+	*/
+	background-color: #fff;	
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	background: transparent;
+	color: #000;
+	display: none;
+}
+
+p{
+	text-align:justify;
+	margin: 0px;
+	padding: 0px;
+}
+
+.p_title{
+	line-height: 18px;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 15px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+/*
+div { -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+*/
+form{
+	margin: 0px;
+	padding: 0px;
+}
+
+form fieldset{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	overflow: auto;
+	margin:0 auto;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+
+form fieldset legend{
+	padding-left: 5px;
+}
+
+form fieldset dt{
+	margin:0px;
+	padding:0px;
+	clear:both;
+	float:none;
+	margin-top:5px;
+	text-align:left;
+	background-color:transparent;
+	overflow: auto;
+}
+
+form fieldset dd{
+	padding:0px;
+	margin:0px;
+	margin-top:0px;
+	clear:both;
+	float:none;
+	background-color:transparent;
+	text-align:left;
+	overflow: auto;
+}
+
+form fieldset dd input,
+form fieldset dd select,
+form fieldset dd textarea{
+	float:left;
+	border:2px #808285 solid;
+	padding:5px;
+	width:250px;
+	color:#e34b1c;
+}
+
+form fieldset dd input:focus{
+	border:2px #e34b1c solid;
+}
+
+form fieldset dd select{
+	height:22px;
+	padding:5px;
+	width:auto;
+}
+
+form fieldset dd option{
+	height:22px;
+	padding:5px;
+	width:auto;
+}
+
+form fieldset dd input[type=checkbox]{
+	border:0px;
+}
+
+form fieldset dd input[type=checkbox]:focus{
+	border:0px;
+}
+
+form fieldset dd input[type=checkbox]:hover{
+	border:0px;
+}
+
+form p{
+	clear:both;
+	text-align: right;
+	margin-top:15px;
+}
+
+form .iptCalendar{
+	width: 100px;
+}
+
+form .readonly{
+	background-color: #D5D5D5;
+	color: #000;
+}
+
+ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul li{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+img{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+	font-weight:bold;
+	color: #f15a24;
+	cursor: pointer;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+table{
+	padding:0px;
+	margin:0px;
+	margin:0 auto;
+	text-align: center;
+	font-size: 12px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table tr{
+	padding: 0px;
+	margin: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table tr td{
+	padding: 5px;
+	margin: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table th{
+	margin:0px;
+	color:#007b3b;
+	font-weight: bold;
+	text-align: right;
+	border-right: 1px #808285 solid;
+	padding: 8px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table thead th{
+	color:#007b3b;
+	text-align: center;
+	border:0px;
+	margin: 0px;
+	padding-left:30px;
+	padding-right:30px;
+	background-color: #f6f6f6;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table tbody th{
+	background-color: transparent;
+	font-weight: normal;
+	margin: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table .zebra{
+	background-color: #F5F6FD;
+}
+
+table .zebra th{
+	background-color: #F5F6FD;
+}
+
+/*
+table tr:hover{
+	background-color: #E7E9FE;
+}
+*/
+
+.lnkNormal{
+	color:#000;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.lnkNormal:hover{
+	text-decoration: underline;
+}
+
+.lnkDestaque{
+	font-size:18px;
+	color:#e34b1c;
+	background: #fff;
+	padding: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid #e34b1c;	
+}
+
+.lnkDestaque:hover{
+	color:#fff;
+	background: #e34b1c;
+	border: 1px solid #e34b1c;	
+}
+
+.ul_cursos li{
+	padding: 15px;
+	font-size: 18px;
+	background-color: #f3790c;
+	color: #fff;
+	margin-bottom: 3px;
+}
+
+.ul_cursos .nome_curso:hover{
+	background-color: #ff8920;
+	cursor: pointer;
+}
+
+.ul_cursos .desc_curso{
+	display: none;
+	overflow: auto;
+}
+
+.ul_cursos .desc_curso a{
+	color: #f15a24;
+}
+
+.ul_cursos .desc_curso .curso_turma{
+	background-color: #d1bea3;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	color: #46361f;
+	text-align: center;
+	padding: 15px;
+	margin: 15px;
+	margin-top:0px;
+	margin-right:0px;
+	float: left;
+	clear: none;
+}
+
+.ul_cursos .desc_curso,
+.ul_cursos .desc_curso:hover{
+	padding: 15px;
+	font-size: 11px;
+	border: 1px solid #f3790c;
+	background-color: #fff;
+	color: #000;
+	margin: 5px;
+	cursor: normal;
+}
+
+
+.ul_cursos li a{
+	color: #fff;
+}
+
+.ul_cursos li a:hover{
+	text-decoration: none;
+}
+
+/* FIM ELEMENTOS HTML */
+
+/* INICIO ESTRUTURA */
+#msgSistema{
+	margin:0px; 
+	text-align:center; 
+	padding:0px; 
+	padding-top:8px; 
+	padding-bottom:8px; 
+	background-color:#F6F6F6; 
+	color:#1E90FF; 
+	font-weight:bold; 
+	font-size:18px; 
+	border-bottom:5px #8CC540 solid; 
+	cursor:pointer;
+	display:none;
+	position: absolute;
+	display: block;
+	width:100%;
+}
+
+/* INICIO TOPO */
+#bgTopo{
+	width:100%;
+	height: 120px;
+	background-color:transparent;
+	position:absolute;
+	left:0px;
+	top:0px;
+	clear:none;
+	margin:0px;
+	padding:0px;
+	border-bottom: 1px #000 solid;
+	z-index: -10;	
+	overflow: hidden;
+}
+
+/* FIM TOPO */
+
+/* INICIO SITE */
+#site{
+	width:1000px;
+	margin: 0 auto;
+	margin-top:0px;
+	background-color: transparent;
+	overflow: auto;
+	z-index:-1;
+}
+
+/* INICIO TOPO-MENU */
+
+#site .topo {
+	height:120px;
+	float: left;
+	clear: none;
+	overflow: hidden;
+	margin-bottom: 25px;
+	width: 1000px;
+}
+
+#site .topo a:hover{
+	text-decoration: none;
+}
+
+#site .topo .imgLogoTopo{
+	margin-top: 5px;
+	margin-left:10px;
+	float: left;
+	clear: none;
+	overflow: hidden;
+}
+
+#site .topo .divisor{
+	margin:0px;
+	width: 1px;
+	height: 120px;	
+	background-color: #000;
+	float: left;
+	clear: none;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#site .topo .imgSapienzaTopo{
+	margin:0px;
+	margin-top: 25px;
+	margin-left: 10px;
+	float: left;
+	clear: none;
+}
+
+#site .topo .menu{
+	float: right;
+	background-color: transparent;
+	width: 550px;
+	/*
+	height: 35px;
+	margin-top: 85px;
+	*/
+	height: 120px;
+	overflow: hidden;
+}
+
+#site .topo .menu img{
+	float: right;
+	clear:both;
+	width:100px;
+	height:60px;
+	border:0px;
+	margin-top:5px;
+	margin-bottom:20px;
+	margin-right:10px;
+	overflow: hidden;
+}
+
+#site .topo ul{
+	float: right;
+	clear:both;
+}
+
+#site .topo ul li{
+	float: left;
+	height: 35px;
+	clear: none;
+	padding-top:10px;
+	border-left: 1px solid #000;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+#site .topo ul li:hover{
+	/*background-color: #ec4b12;*/
+}
+
+#site .topo ul li:hover a{
+	/*color: #fff;*/
+	color: #ec4b12;
+}
+
+#site .topo ul li a{
+	color: #000;
+	font-weight: normal;	
+	padding: 17px;
+	padding-top: 10px;
+}
+
+#site .topo ul li a:hover{
+	color: #ec4b12;
+}
+/* FIM TOPO-MENU */
+
+.nav{
+	height: 100%;
+	width:49%;
+	background: transparent;	
+	cursor: default;
+	float: right;
+	text-align: center;
+	z-index: 100000;
+	/*
+	display: table;
+	*/
+}
+
+.nav .intNav{
+	height: 100%;
+	width:60px;
+	background: transparent;
+	cursor: default;
+	float: right;
+	text-align: center;
+	visibility: hidden;
+	background: url(../img/bg_transp.png) repeat-y;
+}
+
+.nav img{
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.nav .int:hover{
+}
+
+.nav:hover div{
+	visibility: visible;
+}
+
+.nav:hover img{
+	visibility: visible;
+}
+
+.nav40 .intNav{
+	width: 40px;
+}
+
+/* INICIO CONTEUDO */
+#site .conteudo{
+	width:1000px;
+	float:left;
+	clear:none;
+	background-color: transparent;
+	padding-bottom: 20px;
+	border-bottom:1px solid #000;
+	margin-bottom: 20px;
+}
+
+#site .conteudo p{
+	/*padding: 20px;*/
+}
+
+#site .conteudo .main_left{
+	width:700px;
+	float:left;
+	clear:none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+#site .conteudo .main_left .d_slide{
+	background: url(../img/bg_d_slide.png) repeat-x; 
+	padding: 0px; 
+	font-weight: normal;
+	color:#000; 
+	z-index: 1; 
+	position: relative; 
+	height: 70px; 
+	text-align: center; 
+	overflow: hidden; 
+	width: 670px; 
+	padding: 15px; 
+	margin-top: 300px;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+/*
+#site .conteudo .main_left .p_title{
+	line-height: 25px;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 15px;
+	padding-left: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+*/
+#site .conteudo .main_left p{
+	line-height: 18px;
+}
+
+#site .conteudo .divisor{
+	width:1px;
+	margin-left:24px;
+	margin-right:24px;
+	margin-top:100px;
+	padding-top:300px;
+	float:left;
+	clear:none;
+	background-color: #000;
+}
+
+#site .conteudo .main_right{
+	width:250px;
+	float:left;
+	clear:none;
+	background-color: transparent;
+	overflow: auto;
+}
+
+#site .conteudo .main_right  .it_curso{
+	width:230px;
+	padding:20px;
+	padding-left:10px;
+	padding-right:10px;
+	float:left;
+	clear:both;
+	text-align:left;
+	margin-bottom:5px;
+	background-color: #f3efbe;
+	color: #000;
+	font-weight: normal;
+	cursor: pointer;
+	overflow: auto;
+	font-size: 11px;
+}
+
+#site .conteudo .main_right  .it_curso:hover{
+	background-color: #f3790c;
+	color: #fff;
+}
+
+#site .conteudo .main_right  .it_curso:hover a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+/* FIM CONTEUDO */
+
+
+/* INICIO ITENS */
+#site .itens{
+	float:left;
+	clear:none;
+	background-color: transparent;
+}
+
+#site .itens .single{
+	margin:0px;
+	margin-right:35px;
+	float: left;
+	clear: none;
+	width: 310px;
+	font-size: 11px;
+}
+
+#site .itens .single .itImg{
+	width: 310px;
+	height: 220px;
+	background-color: transparent;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #000;
+}
+
+#site .itens .single .itDesc h4{
+	padding: 0px;
+	margin: 0px;
+	padding-bottom: 5px;
+	font-size: 11px;
+}
+
+#site .itens .single .itDesc{
+	width: 250px;
+	height: 125px;
+	overflow: auto;
+}
+
+#site .itens .single .itDesc a{
+	font-size: 12px;
+}
+
+/* FIM ITENS */
+
+/* FIM SITE */
+
+/* FIM ESTRUTURA */
+
+/* INICIO RODAPE */
+#rodape{
+	position:relative;
+	bottom:0px;
+	clear:both;
+	float:none;
+	width: 100%;
+	height: 298px;
+	border-top:1px #000 solid;
+	border-bottom:1px #000 solid;
+	background-color: transparent;
+	color:#000;
+	overflow: hidden;
+}
+
+#rodape .intRodape{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0px;
+	overflow: auto;
+}
+
+#rodape .intRodape .ft_part{
+	clear:none;
+	float:left;
+	padding:20px;
+	width: 459px;
+	height: 258px;
+	overflow: hidden;
+}
+
+#rodape .intRodape .ft_part .social{
+	border-bottom: 1px solid #000;
+	overflow: auto;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#rodape .intRodape .ft_part .social img{
+	width: 50px;
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	float: left;
+	margin-right: 15px;
+}
+
+#rodape .intRodape .ft_part .social p{
+	color:#415697;
+	font-size: 14px;
+	padding-top: 12px;
+}
+
+#rodape .intRodape .ft_part .contato h3{
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#rodape .intRodape .ft_part .contato form,
+#rodape .intRodape .ft_part .contato form fieldset{
+	padding:0px;
+	margin:0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#rodape .intRodape .ft_part .contato form{
+	margin-top: 15px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dt,
+#rodape .intRodape .ft_part .contato form fieldset dd{
+	clear:both;
+	float:left;
+	margin:0px;
+	padding:0px;
+	width: 100%;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd{
+	margin-bottom: 5px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dt{
+	margin-bottom: 3px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd input,
+#rodape .intRodape .ft_part .contato form fieldset dd textarea{
+	float: left;
+	clear: none;
+	width:85%;
+	border: 2px solid #f3ec19;
+	background-color: #f3ec19;
+	margin:0px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd textarea{
+	height: 80px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd button{
+	float: right;
+	clear: none;
+	color: #000;
+	background: #fff;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+	font-weight: normal;
+	font-size:14px;
+	margin-top: 75px;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd button:hover{
+	color: #f15a24;
+	text-decoration: underline;
+}
+
+#rodape .intRodape .ft_part .contato form fieldset dd input:focus,
+#rodape .intRodape .ft_part .contato form fieldset dd textarea:focus{
+	background-color: #faf9d0;
+}
+
+#endereco{
+	clear:both;
+	float:none;
+	width: 100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align: center;
+	font-size: 16px;
+}
+
+#creditos{
+	clear:both;
+	float:none;
+	width: 964px;
+	padding-top:5px;
+	text-align: left;
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0 auto;
+}
+/* FIM RODAPE */
+
+button:disabled { border-color: gray !important; background: silver !important; color: gray !important; cursor: auto !important;}
+
+div.error {width: 95%; display:none; border: 1px solid #cd0a0a; background: #b81900 url(images/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat; color: #ffffff; padding: 0 .7em;}
+div.error label { clear:both; margin-left: auto; display: block; padding: 5px; padding-left: 18px; background:url("images/erro.png") no-repeat 0px 5px; }
+label.error { clear:both; float:left; color:#ab0f14; width:100%;}
+input.error { border: 2px solid #F3A7A9; }
+textarea.error { border: 2px solid #F3A7A9; }
+select.error { border: 2px solid #F3A7A9; }
+
+
+
+/* INICIO JBAR */
+.jbar{
+	min-height:50px;
+	overflow:auto;
+	width:100%;
+	background-color: #fff;
+	position:fixed;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=95); 
+	opacity: 0.95;
+	-moz-opacity: 0.95;
+	text-align:center;
+	left:0px;
+	z-index:9999999;
+	margin:0px;
+	padding:0px;
+	-moz-border-radius: 0px; -webkit-border-radius: 0px;
+}
+.jbar-top{
+	top:0px;
+	border-top:2px solid #fff;
+	border-bottom: 2px solid #000;
+}
+.jbar-bottom{
+	bottom:0px;
+	border-bottom:2px solid #fff;
+	border-top: 1px solid #ebebeb;
+	color:#777;
+}
+.jbar-content{
+	line-height:46px;
+	font-size: 18px;
+	font-family:'Lucida Grande',sans-serif;
+}
+a.jbar-cross{
+	position:absolute;
+	width:31px;
+	height:31px;
+	background:transparent url(../img/cross.png) no-repeat top left;	
+	cursor:pointer;
+	right:10px;
+}
+a.jbar-cross:hover{
+	background-image: url(../img/cross_hover.png)
+}
+.jbar-top a.jbar-cross{
+	top:8px;	
+}
+.jbar-bottom a.jbar-cross{
+	bottom:8px;
+}
+/* FIM JBAR */
+
+
+/*
+.panel { margin: 10px 5px 5px 5px; width: 195px; float: left; font-size: 1.1em; border: 1px solid #dddddd; background: #fff; color: #333333; display:block;}
+*/
+.panel { margin: 0px; width: 195px; float: left; font-size: 1.0em; border: 1px solid #dddddd; background: #fff; color: #333333; display:block;}
+.panel .titulo { border: 1px solid #8dc63f; background: #8dc63f url(../js/jquery-ui/css/custom/images/ui-bg_highlight-soft_25_007b3b_1x100.png) 50% 50% repeat-x; color: #FFFFFF; font-weight: bold; margin: 0.3em; padding: 5px; }
+.panel .titulo .ui-icon { float: right; background-image: url(images/ui-icons_ffffff_256x240.png);}
+.panel .conteudo { padding: 0.4em; font-size: small;}
+
+
+/* INICIO CALENDARIO DE HORARIOS */
+.wc-header .wc-time-column-header,
+.wc-header .wc-day-column-header,
+.wc-header .wc-scrollbar-shim{
+	background-color: #8dc63f;
+	color:#f6f6f6;
+	text-align: center;
+}
+
+.wc-header .wc-day-column-header{
+	text-align: center;
+	width: 96.6833px;
+}
+
+	
+.wc-time-header-cell{
+	background-color: #007b3b;
+	color:#f6f6f6;
+	-moz-border-radius: 0px; 
+	-webkit-border-radius: 0px;
+}
+
+.wc-cal-event{
+	background-color: #808285;
+}
+
+.wc-cal-event .wc-time{
+	background-color: #007b3b;
+	border:0px;
+	font-weight: normal;
+	font-size: 12px;
+}
+/* FIM CALENDARIO DE HORARIOS */
+
+div.player{
+	width:360px;
+	height:262px;
+	cursor: pointer;
+}
+
+.ui-icon-cst { width: 16px; height: 16px; background-image: url(../js/jquery-ui/css/custom/images/ui-icons_808080_256x240.png); display: block; }
+.ui-icon-cst:hover { background-image: url(../js/jquery-ui/css/custom/images/ui-icons_004276_256x240.png); display: block; cursor:pointer;}
+.ui-icon-cst-hover { background-image: url(../js/jquery-ui/css/custom/images/ui-icons_004276_256x240.png); display: block; cursor:pointer;}
+.ui-icon-trash-cst {  background-position: -176px -96px; }
+.ui-icon-pencil-cst { background-position: -64px -112px; }
+
+
+.opButton{
+	border:3px solid transparent; 
+	padding:3px; 
+	clear:none; 
+	float:left; 
+	margin-left: 15px; 
+	margin-top:15px;
+}
+
+.opButton:hover{
+	border:3px solid #ab0f14;
+	cursor: pointer; 
+}
+
+.opButtonSel{
+	border:3px solid #8dc63f; 
+}
+
+.opButtonSel:hover{
+	border:3px solid #8dc63f; 
+	cursor: pointer; 
+}

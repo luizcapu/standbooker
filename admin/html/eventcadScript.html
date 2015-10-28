@@ -1,0 +1,89 @@
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/jquery.numeric.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	/*
+	$("#iptVlrMatricula").maskMoney({decimal:",", thousands:"."});
+	$("#iptVlrCurso").maskMoney({decimal:",", thousands:"."});
+	*/
+	
+	$("#iptStandPerCorridor").numeric();
+	$("#iptNoCorridors").numeric();
+	$("#iptStandPrice").numeric();
+	
+	$("#iptFrom").mask("9999-99-99");
+	$("#iptTo").mask("9999-99-99");
+	
+	$("#frmEventInfo").validate({
+		rules: {
+			iptName:{
+				required: true,
+				minlength:10
+			},
+			iptAddress:{
+				required: true,
+				minlength:5
+			},
+			selCountry:{
+				required: true
+			},
+			selLocation:{
+				required: true
+			},
+			iptFrom:{
+				required: true
+			},
+			iptTo:{
+				required: true
+			},
+			iptStandPerCorridor:{
+				required: true
+			},
+			iptNoCorridors:{
+				required: true
+			},
+			iptStandPrice:{
+				required: true
+			},
+		},
+		messages: {
+			iptName:{
+				required: obrigatorio("name"),
+				minlength:minimo("name", 10)
+			},
+			iptAddress:{
+				required: obrigatorio("address"),
+				minlength:minimo("address", 5)
+			},
+			selCountry:{
+				required: obrigatorio("country")
+			},
+			selLocation:{
+				required: obrigatorio("location")
+			},
+			iptFrom:{
+				required: obrigatorio("start date")
+			},
+			iptTo:{
+				required: obrigatorio("end date")
+			},
+		}
+	});
+
+	$('#frmEventInfo').submit(function() {
+
+		
+		if (!$('#frmEventInfo').valid()) return false;
+
+		$("#divSalvando").show();
+		$("#frmEventInfo").hide();
+
+		return true;		
+	});
+
+	$("#iptName").focus();
+});
+
+</script>

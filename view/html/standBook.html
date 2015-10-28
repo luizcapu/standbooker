@@ -1,0 +1,43 @@
+<p style="float: right; text-align: right; font-size: 11px;">
+{START_DATE} to {END_DATE}
+<br/>
+{ADDRESS}
+<br/>
+{LOCATION_NAME} - {COUNTRY_NAME} 
+</p>
+
+<div style="width: 200px; float: left; clear: none; margin-top: 15px; font-size: 20px;">
+
+	<p style="padding: 5px;">
+	<span style="font-weight: bold;">Stand Number: </span> {STAND_NUMBER}
+	</p>
+
+	<p style="padding: 5px;">
+	<span style="font-weight: bold;">Corridor Number: </span> {CORRIDOR_NUMBER}
+	</p>
+
+	<p style="padding: 5px;">
+	<span style="font-weight: bold;">Price: </span> U$ {PRICE}
+	</p>
+</div>
+
+
+<div style="width: 500px; float: left; clear: none; margin-top: 15px; font-size: 16px; margin-left: 100px;">
+	
+	<h3>{BOOKER_NAME},<br/>wanna book this stand ?</h3>
+	
+	<p style="padding: 10px;">Please, select a <strong>PDF</strong> file and click "Confirm Reservation" button</p>
+		<form name="frmBookStand" id="frmBookStand" action="../process/bookStand.php" method="post" style="margin-top: 5px;" enctype="multipart/form-data">
+			<input style="display: none;" type="text" name="sid" id="sid" value="{STAND_ID}" />
+			<input style="display: none;" type="text" name="eid" id="esid" value="{EVENT_ID}" />			
+			<fieldset>
+				<dd>
+					<input type="file" name="iptMkt" id="iptMkt" value="" />
+				</dd>
+
+				<dd>
+					<button type="submit" class="b-confirm" style="margin: 0px;">Confirm Reservation</button>
+				</dd>
+			</fieldset>
+		</form>
+</div>

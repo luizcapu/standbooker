@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Menu Animado</title>
+<style type="text/css">
+	* { margin:0; padding:0; list-style: none}/* Reset */
+	html { font-family: "Trebuchet MS", Arial, Sans-serif; font-size: 13px}
+	a { 
+	overflow: hidden;
+	color: #fff;
+	text-decoration: none;
+	}
+	#all {
+	 width: 775px;
+	 margin: 20px auto}
+	 
+	 h1 {
+	 	border-bottom: 1px solid #e1e1e1;
+		margin-bottom: .7em
+	 }
+	 
+	 ul { margin-bottom: 25px}
+	 ul li { margin-bottom: .5em}
+	 
+	 /* #animation-1 */
+	#animation-1 li{
+		width: 200px;
+	}
+	 #animation-1 li a {
+	 	display: block;
+		padding:  10px 5px;
+		width:190px;
+		background-color: #ccc
+	 }
+	  /* #animation-2 */
+	 #animation-2 li a {
+	 	display: block;
+		padding:  10px 5px;
+		width: 200px;
+		background-color: #ccc
+	 }
+	 #animation-2 .off a{
+	 	background-color: #e1e1e1	
+	 }
+	  /* #animation-3 */
+	 #animation-3 {
+	 	width: 200px
+	 }
+	  #animation-3 li{
+	  	border: 1px solid #e1e1e1;
+		height: 32px;
+		overflow: hidden;
+		position: relative;
+	  }
+	  #animation-3 li a{
+	  	display: block;
+		padding:  7px 5px;
+	  	color: #6F6F6F
+	  }
+	  #animation-3 li span {
+	  	position: absolute;
+		display: block;
+		height: 35px;
+		width: 200px;
+		background-color: #e1e1e1;
+		top: 35px;
+		left: 0;
+		z-index: -1	
+	  }
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//	#animation-1 	
+		$("#animation-1 li a").hover(
+		function(){
+			$(this).animate({ textIndent: "30px" }, 500 );
+
+		},function(){
+			$(this).animate({ textIndent: "0px" }, 500 );
+		});
+		//	#animation-2 	
+		$("#animation-2 li a").hover(
+		function(){
+			$(this).parent().parent().find("li").addClass("off");
+			$(this).parent().removeClass("off");
+			$(this).animate({ width: "250px" }, 500 );
+		},function(){
+			$(this).parent().parent().find("li").removeClass("off");
+			$(this).animate({ width: "200px" }, 500 );
+		});	
+		//	#animation-3 
+		$("#animation-3 li").append("<span></span>");
+		$("#animation-3 li a").hover(
+		function(){
+			$(this).next("span").animate({ top: "0px" }, 500 );
+		},function(){
+			$(this).next("span").animate({ top: "45px" }, 500 );
+		});	
+
+	});
+</script>
+</head>
+<body>
+<div id="all">
+	<h1>Animação 1</h1>
+
+	<ul id="animation-1">
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contato</a></li>
+	</ul>
+	<h1>Animação 2</h1>
+	<ul id="animation-2">
+
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contato</a></li>
+	</ul>
+	<h1>Animação 3</h1>
+	<ul id="animation-3">
+		<li><a href="#">Inicio</a></li>
+
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contato</a></li>
+	</ul>	
+</div>
+</body>
+</html>

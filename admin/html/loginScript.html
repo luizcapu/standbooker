@@ -1,0 +1,37 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+	$("#frmLogin").validate({
+		rules: {
+			iptLogin:{
+				required: true
+			},
+			iptSenha:{
+				required: true
+			}
+		},
+		messages: {
+			iptLogin:{
+				required: obrigatorio("login")
+			},
+			iptSenha:{
+				required: obrigatorio("senha")
+			}
+		}
+	});
+	
+	$('#frmLogin').submit(function() {
+		
+		if (!$('#frmLogin').valid()) return false;
+
+		$("#spanAcaoLogin").html("Login");
+		$("#divLogando").show();
+		$("#frmLogin").hide();
+		$(".b-confirm").attr("disabled", "disabled");
+
+		return true;		
+	});
+
+	$("#iptLogin").focus();
+});
+</script>

@@ -1,0 +1,28 @@
+<div class="login">
+
+	<div style="position:relative; width: 50%; float: left;">
+		<div style="position:relative; width: 290px; text-align: center; margin: 0 auto; margin-top: 70px;">		
+		<div name="divLogando" id="divLogando" style="display:none; background-color: #fff; padding:15px; margin: 0 auto; text-align: center; color: #000; font-size: 14px; font-weight: bold; overflow: auto;">
+			<img src="../img/loading.gif" alt="Efetuando Login" title="Efetuando Login" />
+			<p style="clear: both; text-align: center;">Wait... <br/> Processing your request<span id="spanAcaoLogin"></span></p>
+		</div>
+		
+		<form name="frmLogin" id="frmLogin" action="../adminProcess/validarLogin.php" method="post" style="margin-top: 5px;">
+			<input type="hidden" name="reqURL" id="reqURL" value="{LOGIN_REQ_URL}" />
+			<fieldset>
+				<dt>Login</dt>
+				<dd>
+					<input type="text" name="iptLogin" id="iptLogin" value="" />
+				</dd>
+				<dt>Password</dt>
+				<dd>
+					<input type="password" name="iptSenha" id="iptSenha" value="" />
+				</dd>
+				<dd>
+					<button type="submit" class="b-confirm" style="margin: 0px;">Enter</button>
+				</dd>
+			</fieldset>
+		</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	$("#frmUserInfo").validate({
+		rules: {
+			iptNome:{
+				required: true,
+				minlength:10
+			},
+			iptLogin:{
+				required: true,
+				minlength:5
+			},
+			iptEmail:{
+				required: true,
+				email:true
+			}
+			<!-- BEGIN BLOCK_PASS_RULES -->
+			,
+			iptNewPass:{
+				required: true,
+				minlength:5				
+			},
+			iptConfirmPass:{
+				required: true,
+				minlength:5,				
+				equalTo: "#iptNewPass"
+			}
+			<!-- END BLOCK_PASS_RULES -->
+		},
+		messages: {
+			iptNome:{
+				required: obrigatorio("nome"),
+				minlength:minimo("nome", 10)
+			},
+			iptLogin:{
+				required: obrigatorio("login"),
+				minlength:minimo("login", 5)
+			},
+			iptEmail:{
+				required: obrigatorio("e-mail"),
+				email:email("e-mail")
+			}
+			<!-- BEGIN BLOCK_PASS_MSGS -->
+			,
+			iptNewPass:{
+				required: obrigatorio("nova senha"),
+				minlength:minimo("nova senha", 5)
+			},
+			iptConfirmPass:{
+				required: obrigatorio("confirmação da nova senha"),
+				minlength:minimo("confirmação da nova senha", 5),
+				equalTo: "Digite a mesma senha"
+			}
+			<!-- END BLOCK_PASS_MSGS -->
+		}
+	});
+
+	$('#frmUserInfo').submit(function() {
+
+		
+		if (!$('#frmUserInfo').valid()) return false;
+
+		$("#divSalvando").show();
+		$("#frmUserInfo").hide();
+
+		return true;		
+	});
+
+	$("#iptLogin").focus();
+});
+
+</script>

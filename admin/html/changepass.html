@@ -1,0 +1,32 @@
+
+
+<div id="reqcad" style="position:relative; width: 75%; float: none; clear: both; overflow: auto; text-align: center; margin: 0 auto; margin-top: 20px;">
+
+	<div name="divSalvando" id="divSalvando" style="display:none; background-color: #fff; padding:15px; margin: 0 auto; text-align: center; color: #000; font-size: 14px; font-weight: bold; overflow: auto;">
+		<img src="../img/loading.gif" alt="Salvando" title="Salvando" />
+		<p style="clear: both; text-align: center;">Wait... Processing your request</p>
+	</div>
+	
+	<div style="width: 300px; overflow: hidden; margin: 0 auto;">
+	<form name="frmChangePass" id="frmChangePass" action="../adminProcess/changepassProcess.php" method="post">
+		<fieldset>
+			<dt>Current Password</dt>
+			<dd>
+				<input type="password" name="iptActual" id="iptActual" value="" />
+			</dd>
+			<dt>New Password</dt>
+			<dd>
+				<input type="password" name="iptNewPass" id="iptNewPass" value="" />
+			</dd>
+			<dt>Confirm New Password</dt>
+			<dd>
+				<input type="password" name="iptConfirmPass" id="iptConfirmPass" value="" />
+			</dd>
+			<dd>
+				<button type="submit" class="b-confirm" onclick="javascript: confirmarAcao();"><img src="../img/s_icons/w/check.png" />Save new pass</button>
+			</dd>
+		</fieldset>
+	</form>
+	</div>
+
+</div>

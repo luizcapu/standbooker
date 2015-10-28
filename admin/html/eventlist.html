@@ -1,0 +1,44 @@
+<a href="eventcad.php" class="b-confirm">New Event</a>
+<div class="v-separator-30">
+</div>
+
+<!-- BEGIN BLOCK_COM_REGISTRO -->
+<table enc-title="admin_accounts">
+	<thead>
+		<tr>
+			<th class="sort-asc">Start Date</th>
+			<th>End Date</th>
+			<th>Event Name</th>
+			<th>Location</th>
+			<th class="col-no-sort">Edit</th>
+			<th class="col-no-sort">Stands</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- BEGIN BLOCK_IT_CADASTRO -->		
+		<tr>
+			<td>{UI_START_DATE}</td>
+			<td>{UI_END_DATE}</td>
+			<td>{UI_EVENT_NAME}</td>
+			<td>{UI_LOCATION} / {UI_COUNTRY}</td>
+			<td class="tbl-row-action">
+				<a onclick="javascript: alert('Unimplemented');" title="Edit Event">
+					<img src="../img/s_icons/b/edit.png" />
+				</a>
+			</td>
+			<td class="tbl-row-action">
+				<a onclick="javascript: alert('Unimplemented');" title="Edit Stands">
+					<img src="../img/s_icons/b/overflowdots.png" />
+				</a>
+			</td>
+		</tr>
+		<!-- END BLOCK_IT_CADASTRO -->		
+	</tbody>
+</table>
+<!-- END BLOCK_COM_REGISTRO -->
+
+<!-- BEGIN BLOCK_SEM_REGISTRO -->
+<p style="clear: both; float: none; padding-top: 30px; padding-bottom: 30px; text-align: center;">	
+No records available
+</p>	
+<!-- END BLOCK_SEM_REGISTRO -->
